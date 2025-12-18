@@ -5,16 +5,16 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev --skip-generate",
-    "db:deploy": "prisma migrate deploy",
+    "db:generate": "dotenv -e ../../../../.env -- prisma generate",
+    "db:migrate": "dotenv -e ../../../../.env -- prisma migrate dev --skip-generate",
+    "db:deploy": "dotenv -e ../../../../.env -- prisma migrate deploy",
     "db:format": "prisma format",
     "lint": "eslint . --max-warnings 0",
     "check:types": "tsc --noEmit",
     "prebuild": "npm run db:generate",
     "predev": "npm run db:generate",
     "postinstall": "npm run db:generate",
-    "studio": "prisma studio",
+    "studio": "dotenv -e ../../../../.env -- prisma studio",
     "knip": "pnpm -w knip --workspace ./packages/internal/databases/transfers",
     "format": "pnpm -w format-dir ./packages/internal/databases/transfers",
     "check:format": "pnpm -w check:format-dir ./packages/internal/databases/transfers"

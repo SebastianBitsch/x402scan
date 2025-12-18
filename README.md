@@ -31,22 +31,22 @@ This is a pnpm monorepo with the following workspaces:
 
 ## Development
 
-_Note: We're working on making this easier to spin-up. If you have any trouble in the mean time, please reach out._
+For detailed setup instructions, see [DEVELOPMENT.md](./DEVELOPMENT.md).
 
-Fill out a `.env.example` with the variables in `scan/.env.example`.
-
-Then install and run:
+Quick start:
 
 ```bash
 # Install dependencies
 pnpm install
 
 # Run the frontend
-pnpm dev
+pnpm dev:scan
 
-# Run the sync service
-pnpm dev:sync
+# Run the sync service (requires Trigger.dev setup)
+cd sync/transfers && pnpm trigger:dev
 ```
+
+**Note**: You'll need to set up databases and environment variables. See [DEVELOPMENT.md](./DEVELOPMENT.md) for complete setup instructions.
 
 ## Contributing
 

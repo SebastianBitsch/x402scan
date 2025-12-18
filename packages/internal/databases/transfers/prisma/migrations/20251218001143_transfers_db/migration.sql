@@ -1,0 +1,2 @@
+-- RenameIndex
+ALTER INDEX "TransferEvent_chain_transaction_from_provider_block_timest_idx" RENAME TO "TransferEvent_chain_transaction_from_provider_block_timesta_idx";
